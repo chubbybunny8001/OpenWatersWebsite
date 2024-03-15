@@ -2,13 +2,13 @@
 import Image from "next/image";
 
 // Services
-import { getPageContentFromContentful } from "@/src/Services/contentfulService";
+import { getContentByEntryId } from "@/src/Services/contentfulService";
 
 // Constants
 import { contentfulEntryIds } from "@/src/Constants/contentfulEntryIds";
 
 export default async function Home() {
-  const content = await getPageContentFromContentful(contentfulEntryIds.homePage);
+  const content = await getContentByEntryId(contentfulEntryIds.homePage);
 
   
   const {

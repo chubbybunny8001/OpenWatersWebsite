@@ -7,7 +7,7 @@ const client = contentful.createClient({
     accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_ID,
 })
 
-export const getPageContentFromContentful = async (entryId) => {
+export const getContentByEntryId = async (entryId) => {
     try {
         const content = await client.getEntry(entryId, {
             include: 10,
