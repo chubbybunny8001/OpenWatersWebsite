@@ -7,6 +7,9 @@ import { getContentByEntryId } from "@/src/Services/contentfulService";
 // Constants
 import { contentfulEntryIds } from "@/src/Constants/contentfulEntryIds";
 
+// Components
+import WaterBackground from "@/src/Components/Global/WaterBackground";
+
 export default async function Home() {
   const content = await getContentByEntryId(contentfulEntryIds.homePage);
 
@@ -14,7 +17,7 @@ export default async function Home() {
   const {
     heading,
     homePage: page,
-    backgroundHeroImage: {
+    heroLogo: {
       fields: {
         description,
         file: {
@@ -31,10 +34,17 @@ export default async function Home() {
   } = content.fields
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24 bg">
-      <h1>{page}</h1>
-      <h3>{heading}</h3>
-      <Image loading="lazy" alt={description} src={`https:${url}`} width={width} height={height}/>
+    <main className="flex flex-col w-full h-full">
+      <WaterBackground className={"flex items-center justify-around w-screen h-screen bg-background-water"}>
+        <Image
+          alt={description}
+          height={height}
+          src={url}
+          width={width}
+        />
+        <h1 className="text-4xl underline font-berkshire">{heading}</h1>
+      </WaterBackground>
+      <section className="w-full h-32 bg-slate-900"></section>
     </main>
   );
 }

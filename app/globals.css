@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .navbar-item-header {
+    @apply text-2xl transition-all duration-100 w-fit;
+
+  }
+
+  .navbar-dropdown {
+    @apply absolute top-0 self-end w-full underline transition-all duration-100 origin-top scale-0 bg-brand-black;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,3 +42,5 @@ body {
     text-wrap: balance;
   }
 }
+
+

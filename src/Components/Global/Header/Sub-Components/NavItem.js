@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 
 const NavItem = ({
   buttonText,
+  className,
   linkAddress,
   openNewWindow
 }) => {
   return (
-    <Link
+    <Link className={className}
       href={linkAddress}
       target={openNewWindow ? "_blank" : "_self"}
     >

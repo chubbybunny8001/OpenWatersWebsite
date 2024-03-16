@@ -23,13 +23,16 @@ const Header = async () => {
   } = await getContentByEntryId(contentfulEntryIds.headerNavigation)
 
   return (
-    <div>
-      <header>
-        <Link href={linkAddress}>
+    <div className="flex items-center justify-between w-screen xl:h-[10vh] sm:py-6 bg-brand-primary" >
+      <header className="xl:w-[25vw] text-center">
+        <Link
+          className="w-full text-4xl font-berkshire text-brand-black"
+          href={linkAddress}
+        >
           {buttonText}
         </Link>
       </header>
-      <nav>
+      <nav className="flex items-center justify-around xl:w-[75vw]">
         {navGroups.length && navGroups.map((navGroup, i) => (
           <NavGroup key={i} content={navGroup} />
         ))}
