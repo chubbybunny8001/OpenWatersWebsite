@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"anonymous"} />
         {/*eslint-disable-next-line @next/next/no-page-custom-font*/}
-        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet" />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="w-screen h-screen overflow-x-hidden bg-fixed bg-background-water">
         <Header />
         {children}
         <Analytics />

@@ -16,7 +16,14 @@ module.exports = {
       },
       colors: {
         "brand-primary": "#BAD3F1",
-        "brand-black": "#020304"
+        "brand-secondary": "#2A628F",
+        "brand-tertiary": "#729FC0",
+        "brand-black": "#020304",
+        "brand-white": "#EFF5FA",
+        "brand-gray": "#B3B9BC",
+        "brand-red": "#8D0935",
+        "brand-green": "#17503F",
+        "brand-yellow": "#D4E166"
       }
     },
   },
