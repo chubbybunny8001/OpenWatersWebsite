@@ -7,7 +7,6 @@ const NavItem = ({
   linkAddress,
   openNewWindow
 }) => {
-  console.log(openNewWindow)
   return (
     <Link
       href={linkAddress}

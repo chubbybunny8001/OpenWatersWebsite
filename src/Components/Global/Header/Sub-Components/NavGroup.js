@@ -19,7 +19,6 @@ const NavGroup = ({
     navGroupSubOptions
   } = content?.fields || {}
 
-  console.log(navGroupSubOptions)
   return (
     <>
       <NavItem
